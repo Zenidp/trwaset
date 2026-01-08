@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRWASET - Masa Depan Sedang Dibangun</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='url(%23grad)'/><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%234F46E5;stop-opacity:1' /><stop offset='100%25' style='stop-color:%23EC4899;stop-opacity:1' /></linearGradient></defs><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-size='60' font-weight='800' fill='white'>T</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #05070A;
+            overflow-x: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #9333EA, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* --- CSS untuk Animasi Background --- */
+        .blob-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s infinite ease-in-out alternate;
+        }
+
+        .blob-1 {
+            top: -5%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(79, 70, 229, 0.5);
+        }
+
+        .blob-2 {
+            bottom: -5%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(147, 51, 234, 0.5);
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+
+        .blob-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            background: rgba(236, 72, 153, 0.4);
+            animation-delay: -10s;
+            animation-duration: 18s;
+        }
+
+        @media (min-width: 768px) {
+            .blob-1 { width: 500px; height: 500px; }
+            .blob-2 { width: 600px; height: 600px; }
+            .blob-3 { width: 400px; height: 400px; }
+            .blob { filter: blur(100px); }
+        }
+
+        @keyframes float {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 30px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+
+        .logo-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body class="text-white relative min-h-screen flex flex-col">
+
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="flex items-center justify-center px-6 py-10 md:py-16 w-full relative z-20">
+        <div class="text-4xl md:text-6xl font-extrabold tracking-tighter uppercase logo-glow text-white">
+            TRWASET
+        </div>
+    </nav>
+
+    <section class="relative px-4 sm:px-6 flex-grow flex flex-col items-center justify-start md:justify-center z-10 pb-20">
+        <div class="max-w-5xl mx-auto text-center">
+            
+            <div class="flex justify-center mb-8 md:mb-12">
+                <div class="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] sm:text-xs md:text-sm font-semibold tracking-widest uppercase text-center whitespace-normal max-w-[90vw] sm:max-w-full leading-relaxed">
+                    The Gold Standard of Property Tokenization in Indonesia
+                </div>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold leading-[1.2] mb-8 md:mb-10 text-white uppercase drop-shadow-2xl">
+                COMING SOON <br> 
+                <span class="gradient-text block mt-4">MASA DEPAN SEDANG DI BANGUN</span>
+            </h1>
+
+            <p class="text-gray-300 text-sm sm:text-base md:text-xl max-w-4xl mx-auto leading-relaxed font-medium px-2 sm:px-0 text-justify mb-12">
+                Trwaset hadir sebagai standar baru infrastruktur kepercayaan di industri properti Indonesia, sebuah bursa digital pionir yang menyatukan prestise aset fisik dengan transparansi teknologi blockchain. Kami mendemokrasikan kepemilikan aset property melalui tokenisasi digital yang dijamin penuh oleh legalitas standar negara, membuka akses eksklusif bagi, investor institusi, hingga pemodal ritel untuk memiliki properti bernilai tinggi secara aman dan berintegritas.
+            </p>
+
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <p class="text-gray-400 text-sm md:text-base mb-4">
+                    Tertarik untuk menjadi bagian dari perjalanan revolusioner kami?
+                </p>
+                <a href="mailto:trwaset@gmail.com" class="text-white hover:text-indigo-400 transition-colors duration-300 font-semibold text-lg md:text-xl underline underline-offset-8 decoration-indigo-500/50">
+                    Kirim profil profesional Anda ke trwaset@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
